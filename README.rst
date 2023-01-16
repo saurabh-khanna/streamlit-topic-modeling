@@ -1,4 +1,4 @@
 README
 ******
 
-A topic modeling GUI application using Streamlit deployed on Streamlit Sharing.
+A topic modeling GUI application built using Streamlit.
