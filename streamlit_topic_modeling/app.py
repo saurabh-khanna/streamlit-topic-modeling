@@ -28,6 +28,14 @@ DEFAULT_NUM_TOPICS = 6
 
 nltk.download("stopwords")
 
+# hiding the hamburger menu and footer
+hide_streamlit_style = """
+<style>
+.css-164nlkn egzxvld1 {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
+
 DATASETS = {
     "Elon Musk Tweets 2015-2020": {
         "path": "../data/elonmusk.csv.zip",
@@ -390,8 +398,9 @@ def train_projection(projection, n_components, df):
 
 if __name__ == "__main__":
     st.set_page_config(
-        page_title="Topic Modeling Dashboard", page_icon=":balloon:", layout="wide"
+        page_title="Topic Modeling Dashboard", page_icon="🌱", layout="wide"
     )
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
     preprocessing_options = st.sidebar.form("preprocessing-options")
     with preprocessing_options:
